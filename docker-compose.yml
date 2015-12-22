@@ -1,0 +1,21 @@
+mysql:
+  image: mysql
+  volumes:
+    - ./volumes/mysql:/var/lib/mysql/
+  ports:
+    - 3306:3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+
+redis:
+  image: redis
+  ports:
+    - 6379:6379
+
+elasticsearch:
+  image: elasticsearch
+  volumes:
+    - ./volumes/elasticsearch:/usr/share/elasticsearch/data
+  ports:
+    - 9200:9200
+    - 9300:9300
