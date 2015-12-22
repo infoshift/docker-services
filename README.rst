@@ -1,9 +1,9 @@
-***
 docker-services
-***
+===============
 
 A bunch of commonly used services in docker.
 
-## Usage
+Usage
+-----
 
 Just run ``fig up -d``.
