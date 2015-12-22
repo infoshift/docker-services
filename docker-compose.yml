@@ -19,3 +19,12 @@ elasticsearch:
   ports:
     - 9200:9200
     - 9300:9300
+
+fluentd:
+  image: fluent/fluentd
+  volumes:
+    - ./fluentd/default.conf:/fluentd/etc/default.conf
+  ports:
+    - 24224:24224
+  environment:
+    - FLUENTD_CONF=default.conf
